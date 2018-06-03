@@ -1,0 +1,445 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>iQuery - Ask at Your Leisure</title>
+   <meta name="keywords" content="HTML5 Template" />
+   <meta name="description" content="iQuery - Ask at Your Leisure">
+   <meta name="author" content="BronCode">
+   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <link rel="shortcut icon" href="img/iQuery_favicon.ico" type="image/x-icon" />
+   <link rel="iQuery-icon" href="img/iQuery_favicon.png">
+
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Cabin:400,600,700" rel="stylesheet">
+
+   <!-- Vendor CSS -->
+   <link rel="stylesheet" href="vendor/tether/tether.min.css" />
+   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+   <link rel="stylesheet" href="vendor/bootstrap/css/glyphicon.css" />
+   <link rel="stylesheet" href="vendor/ion-icons/css/ionicons.min.css" />
+   <link rel="stylesheet" href="vendor/owl-carousel/owl.theme.css" />
+   <link rel="stylesheet" href="vendor/owl-carousel/owl.carousel.css" />
+   <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.css" />
+   <link rel="stylesheet" href="vendor/lite-tooltip/css/litetooltip.css" />
+   <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700,800,900|Roboto%3A700%2C500%2C900%2C400" rel="stylesheet" type="text/css" />
+
+   <!-- Theme CSS -->
+   <link href="css/main.css" rel="stylesheet" />
+   <link href="css/main-shortcodes.css" rel="stylesheet" />
+   <link href="css/header.css" rel="stylesheet" />
+   <link href="css/form-element.css" rel="stylesheet" />
+   <link href="css/font-icons.css" rel="stylesheet" />
+   <link href="css/animation.css" rel="stylesheet" />
+   <link href="css/responsive.css" rel="stylesheet" />
+<link href="css/streamline-icon.css" rel="stylesheet" />
+   <link href="css/utilities.css" rel="stylesheet" />
+   <link href="css/skins/default.css" rel="stylesheet" />
+
+   <!-- Current Page CSS -->
+   <link rel="stylesheet" href="vendor/rs-plugin/css/settings.css">
+   <link rel="stylesheet" href="vendor/rs-plugin/css/layers.css">
+   <link rel="stylesheet" href="vendor/rs-plugin/css/navigation.css">
+     <!-- Current Page CSS -->
+   <link href="smartforms/Templates/css/smart-forms.css" rel="stylesheet" />
+
+
+   <link href="vendor/dzsparallaxer/dzsparallaxer.css" rel="stylesheet" />
+   <link href="vendor/dzsparallaxer/dzsscroller/scroller.css" rel="stylesheet" />
+   <link href="vendor/dzsparallaxer/advancedscroller/plugin.css" rel="stylesheet" />
+
+   <!-- Base MasterSlider style sheet -->
+   <link rel="stylesheet" href="sliders/master-slider/classic-sliders/masterslider/style/masterslider.css" />
+   <link href="sliders/master-slider/classic-sliders/masterslider/skins/default/style.css" rel='stylesheet' type='text/css'>
+   <link href="sliders/master-slider/classic-sliders/fullscreen/style/ms-fullscreen.css" rel="stylesheet" />
+   <link href="sliders/master-slider/classic-sliders/videogallery/style/ms-videogallery.css" rel="stylesheet" />
+
+   <!-- Theme Custom CSS -->
+   <link rel="stylesheet" href="css/custom.css">
+
+   <!-- Style Swicher -->
+   <link href="vendor/style-switcher/style-switcher.css" rel="stylesheet" />
+   <link href="vendor/style-switcher/bootstrap-colorpicker/css/bootstrap-colorpicker.css" rel="stylesheet" />
+   <!-- jQuery library , socketio-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="js/jquery.playSound.js"></script>
+   <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+   <link href="css/student_style.css" rel="stylesheet" type="text/css">
+   <script src="js/teacher.js"></script>
+
+   <style type="text/css">
+
+      #slider, #rev_slider_6_1 {
+         height: 100vh;
+      }
+
+      .ms-fullscreen-template {
+         min-height: 250px;
+      }
+
+      .master-slider {
+         height: 100%;
+         font-family: Lato, arial, sans-serif;
+      }
+
+      .demos-filter {
+         margin: 0;
+         text-align: right;
+      }
+
+      .demos-filter li {
+         list-style: none;
+         margin: 10px 0px;
+      }
+
+      .demos-filter li a {
+         display: block;
+         border: 0;
+         text-transform: uppercase;
+         letter-spacing: 1px;
+         color: #444;
+      }
+
+      .demos-filter li a:hover,
+      .demos-filter li.activeFilter a {
+         color: #1ABC9C;
+      }
+
+      @media (max-width: 991px) {
+         .demos-filter {
+            text-align: center;
+         }
+
+         .demos-filter li {
+            float: left;
+            width: 33.3%;
+            padding: 0 20px;
+         }
+      }
+
+      @media (max-width: 767px) {
+         .demos-filter li {
+            width: 50%;
+         }
+      }
+   </style>
+    
+    <!-- jQuery library , socketio-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/jquery.playSound.js"></script>
+	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="js/teacher.js"></script>
+	<script src="vendor/modernizr-3.5.0.min.js"></script>
+    <!-- end jQuery-->
+    
+</head>
+
+<body>
+   <div class="wrapper">
+      <!--Header-->
+      <header id="header" class="header-narrow header-transparent" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 1, 'stickySetTop': '1'}">
+         <div class="header-body">
+            <div class="header-container container">
+               <div class="header-row">
+                  <div class="header-column">
+                     <div class="header-row">
+                        <div class="header-logo">
+                           <a href="/home.html">
+                              <img alt="iQuery" width="120" height="80" src="img/iQuery_logo.png">
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="header-column justify-content-end">
+                     <div class="header-row">
+                        <div class="header-nav header-nav-top-line">
+                           <div class="header-nav-main header-nav-main-effect-2 header-nav-main-sub-effect-1">
+                              <nav class="collapse">
+                                 <ul class="nav nav-pills" id="mainNav">
+
+                                     <!--PUT IN IF NEEDED-->
+                                     <li class="dropdown">
+
+
+                                       <a class="dropdown-item dropdown-toggle active" href="/home.html">Home </a>
+                                     </li>
+
+
+
+
+                                    <li class="nav-item">
+                                       <a class="nav-link" href="about-us.html">About</a>
+
+                                    <li class="nav-item">
+                                       <a class="nav-link" href="contact-us.html">Contact</a>
+
+                                    </li>
+
+                           <button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main nav">
+                              <i class="fa fa-bars"></i>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!--End Header-->
+
+
+
+             <div class="lobby">
+               <!-- <ul id="messages"></ul> -->
+               <form action="">
+                 <button class="button" id="leave_button">Close Room</button>
+               </form>
+             </div>
+             <div class="top_q">
+               <!--button class="button" id="clear_button">Clear</button-->
+             </div>
+             </div>
+
+<div class="wrapz">
+                        <!-- LAYER NR. 10 -->
+                         <div class="page body-sign">
+
+         <div class="page-inner p-none no-border">
+
+            <section class="section-big">
+
+               <div class="container">
+                  <div class="row">
+
+                     <div class="col-md-6 offset-md-3">
+
+                        <div class="smart-wrap">
+                           <div class="smart-forms smart-container wrap-3">
+
+                              <div class="form-header header-primary">
+                                 <h4><i class="fa fa-apple"></i>Teacher</h4>
+                              </div><!-- end .form-header section -->
+
+                              <form method="post" action="/pages-login.html" id="contact">
+                                 <div class="form-body">
+
+
+
+
+                                    <div class="section">
+                                       <label class="field prepend-icon">
+                                          <input type="text" name="votequota" id="input_vote_value" class="gui-input" placeholder="Enter vote quota">
+                                          <span class="field-icon"><i class="fa fa-check-circle"></i></span>
+                                       </label>
+                                    </div><!-- end section -->
+
+                                    <div class="section">
+                                       <label class="field prepend-icon">
+                                          <input type="text" name="roomnumber" id="input_rm_name" class="gui-input" placeholder="Enter room name">
+                                          <span class="field-icon"><i class="fa fa-group"></i></span>
+                                       </label>
+                                    </div><!-- end section -->
+
+
+                                 </div><!-- end .form-body section -->
+                                 <div class="form-footer">
+
+                                   <center><button type="submit" class="btn btn-info btn-shadow" id="create_button" href="#">Create Room</button>
+                                     <button type="reset" value="Reset" class ="btn btn-default btn-shadow" >Clear</button>
+                                   </center>
+
+
+
+
+
+
+                                 </div><!-- end .form-footer section -->
+                              </form>
+
+                           </div><!-- end .smart-forms section -->
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </div>
+       </div>
+
+                          <!-- LAYER NR. 11 -->
+    <div class="container">
+		<div class="room-area">
+			<p>Set Vote Quota:</p><input class="form-control" id="input_vote_value" type="text">
+			<p>Set Room Name:</p><input class="form-control" id="input_rm_name" type="text"> <button class="button" id="create_button">Create Room</button>
+		</div>
+		<div class="lobby">
+			<!-- <ul id="messages"></ul> -->
+			<form action="">
+				<button class="button" id="leave_button">Close Room</button>
+			</form>
+		</div>
+		<div class="top_q">
+			<button class="button" id="clear_button">Clear</button>
+		</div>
+	</div>
+
+                         <!--CANNED QueSTION BUTTON-->
+
+                            <center><button type="" class="btn btn-primary btn-shadow" id="canned_Qs_button" href="/cannedquestion.php">Canned Qs</button>
+                                     <button type="" value="Quiz" class ="btn btn-default btn-shadow" >Quiz Mode</button>
+                                   </center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                     </li>
+                  </ul>
+                  <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+               </div>
+            </div>
+         </section>
+
+
+
+   <!-- Vendor -->
+   <script src="vendor/jquery/jquery.js"></script>
+   <script src="vendor/jquery/jquery.nav.js"></script>
+   <script src="vendor/jquery/jquery.validate.js"></script>
+   <script src="vendor/jquery.appear/jquery.appear.min.js"></script>
+   <script src="vendor/jquery.easing/jquery.easing.min.js"></script>
+   <script src="vendor/jquery-cookie/jquery-cookie.min.js"></script>
+   <script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
+   <script src="vendor/modernizr/modernizr.min.js"></script>
+   <script src="vendor/tether/tether.min.js"></script>
+   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+   <script src="vendor/menuzord/menuzord.js"></script>
+   <script src="vendor/sticky/jquery.sticky.min.js"></script>
+   <script src="vendor/isotope/jquery.isotope.min.js"></script>
+   <script src="vendor/respond/respond.js"></script>
+   <script src="vendor/images-loaded/imagesloaded.js"></script>
+   <script src="vendor/owl-carousel/owl.carousel.js"></script>
+   <script src="vendor/wow/wow.min.js"></script>
+   <script src="vendor/lite-tooltip/js/litetooltip.js"></script>
+   <script src="js/theme-plugins.js"></script>
+
+   <script src="vendor/dzsparallaxer/dzsparallaxer.js"></script>
+   <script src="vendor/dzsparallaxer/dzsscroller/scroller.js"></script>
+   <script src="vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
+
+   <!-- Current Page Vendor and Views -->
+   <script src="vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+   <script src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+   <!-- Theme Initialization -->
+   <script src="js/theme.js"></script>
+
+   <!-- Custom JS -->
+   <script src="js/custom.js"></script>
+
+   
+
+   <script type="text/javascript">
+      var tpj = jQuery;
+
+      var revapi6;
+      tpj(document).ready(function () {
+         if (tpj("#rev_slider_6_1").revolution == undefined) {
+            revslider_showDoubleJqueryError("#rev_slider_6_1");
+         } else {
+            revapi6 = tpj("#rev_slider_6_1").show().revolution({
+               sliderType: "hero",
+               jsFileLocation: "include/rs-plugin/js/",
+               sliderLayout: "fullscreen",
+               dottedOverlay: "none",
+               delay: 9000,
+               navigation: {
+               },
+               responsiveLevels: [1240, 1024, 778, 480],
+               visibilityLevels: [1240, 1024, 778, 480],
+               gridwidth: [1240, 1024, 778, 480],
+               gridheight: [868, 768, 960, 720],
+               lazyType: "none",
+               parallax: {
+                  type: "scroll",
+                  origo: "slidercenter",
+                  speed: 400,
+                  levels: [10, 15, 20, 25, 30, 35, 40, -10, -15, -20, -25, -30, -35, -40, -45, 55],
+                  type: "scroll",
+               },
+               shadow: 0,
+               spinner: "off",
+               autoHeight: "off",
+               fullScreenAutoWidth: "off",
+               fullScreenAlignForce: "off",
+               fullScreenOffsetContainer: "",
+               fullScreenOffset: "",
+               disableProgressBar: "on",
+               hideThumbsOnMobile: "off",
+               hideSliderAtLimit: 0,
+               hideCaptionAtLimit: 0,
+               hideAllCaptionAtLilmit: 0,
+               debugMode: false,
+               fallbacks: {
+                  simplifyAll: "off",
+                  disableFocusListener: false,
+               }
+            });
+         }
+      });	/*ready*/
+   </script>
+
+   <!-- Master Slider -->
+   <script src="sliders/master-slider/classic-sliders/masterslider/masterslider.min.js"></script>
+   <script type="text/javascript">
+
+      var slider = new MasterSlider();
+
+      slider.control('arrows', { insertTo: '#masterslider' });
+      slider.control('bullets');
+
+      slider.setup('masterslider', {
+         width: 1024,
+         height: 768,
+         space: 5,
+         view: 'basic',
+         layout: 'fullscreen',
+         fullscreenMargin: 0,
+         speed: 20
+      });
+
+      var slider2 = new MasterSlider();
+      slider2.setup('masterslider2', {
+         width: 550,
+         height: 350,
+         space: 5,
+         shuffle: true,
+         loop: true,
+         view: 'basic'
+      });
+
+      slider2.control('arrows');
+      slider2.control('thumblist', { autohide: false, dir: 'h' });
+   </script>
+
+
+
+</body>
+</html>

@@ -4,7 +4,7 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2013, Tech Stream
  * http://techstream.org
  */
@@ -21,7 +21,7 @@ function addRow(tableID) {
 		}
 	}else{
 		 alert("Maximum Number of Quesitons is 10.");
-			   
+
 	}
 }
 

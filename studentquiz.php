@@ -5,34 +5,32 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <link rel="stylesheet" type="text/css" href="css/default.css"/>
     </head>
-    <body>    
-        <form action="" class="register">
-           
-			<?php if(isset($_POST)==true && empty($_POST)==false): 
+    <body>
+        <form action="submitquiz.php"  class="register">
+
+			<?php if(isset($_POST)==true && empty($_POST)==false):
 				$chkbox = $_POST['chk'];
 				$bus = $_POST['bus'];
 				$day = $_POST['day'];
 				$month = $_POST['month'];
-				$mob = $_POST['mob'];
+
 				$type = $_POST['type'];
 				$from = $_POST['from'];
 				$to=$_POST['to'];
-				$root=$_POST['root'];
-				$BX_NAME=$_POST['BX_NAME'];
-				$BX_a1=$_POST['BX_a1'];			
+
+				$TFNAME=$_POST['TFNAME'];
+        $BX_NAME=$_POST['BX_NAME'];
+				$BX_a1=$_POST['BX_a1'];
 				$BX_a2=$_POST['BX_a2'];
-				$BX_a3=$_POST['BX_a3'];		
-                $BX_a4=$_POST['BX_a4'];	
-                $R_NAME=$_POST['R_NAME'];
-                $RNAME1=$_POST['RNAME1'];
-                $TFNAME=$_POST['TFNAME']
-                
+				$BX_a3=$_POST['BX_a3'];
+        $BX_a4=$_POST['BX_a4'];
+
 			?>
              <h1>iQuery Generated Quiz</h1>
 			<fieldset class="row1">
                 <legend>Quiz Information</legend>
 				<p>
-                    <label>Quiz Name 
+                    <label>Quiz Name
                     </label>
                     <input name="bus" type="text" readonly="readonly" value="<?php echo $bus ?>"/>
                     <label>Date of Quiz
@@ -40,10 +38,10 @@
 					<input type="text" readonly="readonly" class="small" value="<?php echo $day ?>"/>
 					<input type="text" readonly="readonly" class="small" value="<?php echo $month ?>"/>
 					<input type="text" readonly="readonly" class="small" value="2013"/>
-					<label>Quiz Type  
+					<label>Quiz Type
                     </label>
                     <input  type="text" readonly="readonly" value="<?php echo $type ?>"/>
-					
+
                 </p>
                 <p>
 					<label>Class Name
@@ -52,26 +50,26 @@
 					<label>Chapter/Section
                     </label>
 					<input name="to" type="text" readonly="readonly" value="<?php echo $to ?>"/>
-					<label>Quiz Type
+			<!--		<label>Quiz Type
                     </label>
 					<input  type="text" readonly="readonly" value="<?php echo $root ?>"/>
-					 
-                </p>
-               
-				
+
+        </p> -->
+
+
 				<div class="clear"></div>
             </fieldset>
             <fieldset class="row2">
                 <legend>Questions
-                </legend>				
+                </legend>
                 <table id="dataTable" class="form" border="1">
 					<tbody>
 					<?php foreach($BX_NAME as $a => $b){ ?>
-                        
+
 						<tr>
 							<p>
 								<td >
-									
+
 								</td>
 								<td>
 									<label>MC Questions</label>
@@ -79,57 +77,33 @@
 								</td>
 								<td>
 									<label for="BX_a1">Answer A:</label>
-                                     <input type="radio" name="<?php echo BX_NAME[$a]; ?>" value="answer<?php echo [$a]?>"> <?php echo $BX_a1[$a]; ?><br>
+                                     <input type="radio" name="<?php echo $a; ?>" value="answer<?php echo [$a]?>"> <?php echo $BX_a1[$a]; ?><br>
                                     <label for="BX_a2">Answer B: </label>
-                                    <input type="radio" name="<?php echo BX_NAME[$a]; ?>" value="answer<?php echo [$a]?>"> <?php echo $BX_a2[$a]; ?><br>
+                                    <input type="radio" name="<?php echo $a; ?>" value="answer<?php echo [$a]?>"> <?php echo $BX_a2[$a]; ?><br>
                                      <label for="BX_a3">Answer C: </label>
-                                    <input type="radio" name="<?php echo BX_NAME[$a]; ?>" value="answer<?php echo [$a]?>"> <?php echo $BX_a3[$a]; ?><br>
+                                    <input type="radio" name="<?php echo $a; ?>" value="answer<?php echo [$a]?>"> <?php echo $BX_a3[$a]; ?><br>
                                         <label for="BX_a4">Answer D: </label>
-                                    <input type="radio" name="<?php echo BX_NAME[$a]; ?>" value="answer<?php echo [$a]?>"> <?php echo $BX_a4[$a]; ?><br>
+                                    <input type="radio" name="<?php echo $a; ?>" value="answer<?php echo [$a]?>"> <?php echo $BX_a4[$a]; ?><br>
                                 </td>
 							</p>
 						</tr>
 					<?php } ?>
-					</tbody>
-                </table>
-                <table id="shortR" class="form" border="1">
-					<tbody>
-					<?php foreach($BX_NAME as $a => $b){ ?>
-                        
-						<tr>
-							<p>
-							
-								<td>
-									<label>Short Response Question</label>
-									<input type="text" readonly="readonly" name="<?php echo R_NAME[$a]; ?>" value="<?php echo $R_NAME[$a]; ?>">
-								</td>
-								
-									<td><input type="text" id="quiz7" style="display:block;" size=60 maxlength=60 value=""></td>
-                               
-							</p>
-						</tr>
-					<?php } ?>
-					</tbody>
-                </table>
+
                 <table id="tfTable" class="form" border="1">
 					<tbody>
-					<?php foreach($BX_NAME as $a => $b){ ?>
-                        
+					<?php foreach($TFNAME as $a => $b){ ?>
+
 						<tr>
-							<p>
-								<td >
-									
-								</td>
+
 								<td>
 									<label>True/False Question</label>
-									<input type="text" readonly="readonly" name="<?php echo TFNAME[$a]; ?>" value="<?php echo $TFNAME[$a]; ?>">
+									<input type="text" readonly="readonly" name="<?php echo $a ; ?>" value="<?php echo $TFNAME[$a]; ?>">
 								</td>
 								<td>
-									
-                                     <input type="radio" name="tf<?php echo BX_NAME[$a]; ?>" value="True"> True <br>
-                                
-                                    <input type="radio" name="tf<?php echo BX_NAME[$a]; ?>" value="False"> False <br>
-                                   
+                                    <input type="radio" name="tf<?php echo $a; ?>" value="True"> True <br>
+
+                                    <input type="radio" name="tf<?php echo $a; ?>" value="False"> False <br>
+
                                 </td>
 							</p>
 						</tr>
@@ -139,15 +113,16 @@
 				<div class="clear"></div>
             </fieldset>
             <fieldset class="row3">
-                
+
 				<div class="clear"></div>
             </fieldset>
             <fieldset class="row5">
-                
+
                 <p>
-					<input class="submit" type="button" value="Submit Quiz &raquo;" />
-					
-					<a class="submit" href="student.html"/>Back to Student Page</a>
+				<!--	<input class="submit" type="button" href="submitquiz.php" value="Submit Quiz">
+   <a class="submit" href="submitquiz.php"/>Submit Quiz</a> -->
+					<a class="submit" href="submitquiz.php"/>Submit Quiz</a>
+
                 </p>
 				<div class="clear"></div>
             </fieldset>
@@ -162,9 +137,9 @@
     </body>
 	<!-- Start of StatCounter Code for Default Guide -->
 <script type="text/javascript">
-var sc_project=9046834; 
-var sc_invisible=1; 
-var sc_security="ec55ba17"; 
+var sc_project=9046834;
+var sc_invisible=1;
+var sc_security="ec55ba17";
 var scJsHost = (("https:" == document.location.protocol) ?
 "https://secure." : "http://www.");
 document.write("<sc"+"ript type='text/javascript' src='" +
@@ -178,8 +153,3 @@ src="http://c.statcounter.com/9046834/0/ec55ba17/1/"
 alt="free hit counter"></a></div></noscript>
 <!-- End of StatCounter Code for Default Guide -->
 </html>
-
-
-
-
-

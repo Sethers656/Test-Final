@@ -144,9 +144,9 @@
 				<legend>Question Details</legend>
 				<p>
 					<input type="button" value="Add MC Question" onClick="addRow('dataTable')" />
-          	<input type="button" value="Add ShortR Question" onClick="addRow('shortRtable')" />
+
             	<input type="button" value="Add Tf Question" onClick="addRow('tfTable')" />
-					<input type="button" value="Remove Question" onClick="deleteRow('dataTable'); deleteRow('shortRtable'); deleteRow('tfTable')"  />
+					<input type="button" value="Remove Question" onClick="deleteRow('dataTable'); deleteRow('tfTable')"  />
 
 					<p>(All acions apply only to entries with check marked check boxes only.)</p>
 				</p>
@@ -188,27 +188,12 @@
                     <p>
                     </tbody>
                   </table>
-                  <table id="shortRtable" class="form" border="1">
-                    <tbody>
-                    <tr style="display:block;" id="shortR">
-                      <td><input type="checkbox" required="required" name="chk[]" checked="checked" /></td>
-                                <td><label>Question</label></td>
-                              <td><input type="text" name="R_NAME[]"  size=20 maxlength=12 value=""></td>
 
-                            
-
-                            </td>
-                            </tr>
-
-                          </p>
-                          <p>
-                          </tbody>
-                            </table>
         <table id="tfTable" class="form" border="1">
-              <tr  style="display:inline-block;" id="tf">
+              <tr  style="" id="tf">
                               <td><input type="checkbox" required="required" name="chk[]" checked="checked" /></td>
                                    <td><label>Question. </label></td>
-                                   <td><input type="text" id="quiz4" name="TFNAME[]" style="display:inline-block;" size=20 maxlength=12 value=""></td>
+                                   <td><input type="text" id="quiz4" name="TFNAME[]" style="" size=20 maxlength=12 value=""></td>
                                    <td><label>T/F </label></td>
 
                                    <td><select>
@@ -260,43 +245,30 @@ var scJsHost = (("https:" == document.location.protocol) ?
 document.write("<sc"+"ript type='text/javascript' src='" +
 scJsHost+
 "statcounter.com/counter/counter.js'></"+"script>");
-
 function show(){
-
     var option = document.getElementById("root").value;
-
     if(option === "Select"){
       document.getElementById("tf").style.display="none";
       document.getElementById("mc").style.display="none";
-      document.getElementById("shortR").style.display="none";
+
     }
 else    if(option === "Multiple Choice"){
       document.getElementById("tf").style.display="none";
       document.getElementById("mc").style.display="block";
-      document.getElementById("shortR").style.display="none";
+
     }
   else  if(option === "Short Response")
           {
                 document.getElementById("tf").style.display="none";
                 document.getElementById("mc").style.display="none";
-                document.getElementById("shortR").style.display="block";
-          }
-
-  else  if(option === "True/False")
-          {
-
-                document.getElementById("tf").style.display="block";
-                document.getElementById("mc").style.display="none";
-                document.getElementById("shortR").style.display="none";
 
           }
 
 }
 function fix(){
-
     document.getElementById("tf").style.display="none";
     document.getElementById("mc").style.display="block";
-    document.getElementById("shortR").style.display="none";
+
 }
 </script>
 <noscript><div class="statcounter"><a title="free hit
