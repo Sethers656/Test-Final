@@ -117,9 +117,11 @@
          }
       }
    </style>
+    
 </head>
 
-<body>
+
+
    <div class="wrapper">
       <!--Header-->
       <header id="header" class="header-narrow header-transparent" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 1, 'stickySetTop': '1'}">
@@ -170,48 +172,47 @@
                </div>
             </div>
          </div>
-      </header>
-                <br> <br> <br> <br> <br>
-                <form action="cannedanswer.php" class="register" method="POST">
-<table id="dataTable" class="form" border="0"formaction='cannedanswer.php'>
-                  <tbody id="mc">
-						
-						<td>
-							<label>Canned Question</label>
-							<input type="text" required="required" name="QNAME">
-						 </td>
-						 <td>
-							<label for="BX_a1">Answer A</label>
-							<input type="text" required="required" class="large"  name="A1">
-					     </td>
-						 <td>
-							<label for="BX_a2">Answer B</label>
-							<input type="text" required="required" class="large"  name="A2">
-					     </td>
-                           <td>
-							<label for="BX_a3">Answer C</label>
-							<input type="text" required="required" class="large"  name="A3">
-					     </td>
-                           <td>
-							<label for="BX_a4">Answer D</label>
-							<input type="text" required="required" class="large"  name="A4">
-					     </td>
-						 <td>
-							<label for="Correct">Correct Answer</label>
-							<select id="Correct" name="BX_birth" required="required">
-								<option>....</option>
-								<option>A</option>
-								<option>B</option>
-                <option>C</option>
-                <option>D</option>
-							</select>
-						 </td>
+             </div>
+             </div>
+          </div>
+          
+       </header>
+    </div>
+    <br>  <br>  <br>  <br>
+    <body>
+        
+        <form action="submitquiz.php"  class="register">
+            <?php if(isset($_POST)==true && empty($_POST)==false):
 
-                    </tr>
-                    <p>
-                    </tbody>
-                  </table>
-          <input class="submit" type="submit" href='/cannedanswer.php'value="Submit &raquo;" />
-         
+        $QNAME=$_POST['QNAME'];
+				$a1=$_POST['A1'];
+				$a2=$_POST['A2'];
+				$a3=$_POST['A3'];
+        $a4=$_POST['A4'];
+
+			?>
+            <label for="A1">Answer A:</label>
+                                     <input type="radio" name="cannedQ" value="answer A"> <?php echo $a1; ?><br>
+                                    <label for="a2">Answer B: </label>
+                                    <input type="radio" name="cannedQ" value="answer B"> <?php echo $a2; ?><br>
+                                     <label for="a3">Answer C: </label>
+                                    <input type="radio" name="cannedQ" value="answer C"> <?php echo $a3; ?><br>
+                                        <label for="a4">Answer D: </label>
+                                    <input type="radio" name="cannedQ" value="answer D"> <?php echo $a4; ?><br>
+		<a class="submit" href="submitquiz.php"/>Submit Quiz</a>
+
+                </p>
+				<div class="clear"></div>
+            </fieldset>
+		<?php else: ?>
+		<fieldset class="row1">
+			<legend>Sorry</legend>
+			 <p>Some things went wrong please try again.</p>
+		</fieldset>
+		<?php endif; ?>
+			<div class="clear"></div>
+        </form>
     </body>
 </html>
+
+                     
